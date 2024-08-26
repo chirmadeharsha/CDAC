@@ -7,32 +7,32 @@ class Demo1{
 	System.out.println(f); 
 	//20.8978
 	float f1 = 10.0f;
-	System.out.println(f1);
+	System.out.println(f1); //10
 	
 	int a1 = (int)f1;
-	System.out.println(a1);
+	System.out.println(a1);  //4
 	
 	//int 1variable = 10;
-	//System.out.println(1variable);
+	//System.out.println(1variable); //ERROR
 	
 	int $variable = 10;
-	//int $variable = 10;
+	//int $variable = 10;  //EXECUTE
 	System.out.println($variable); // 10
 	$variable = 20;
 	System.out.println($variable); // 20
 	
 	
 	//int @variable = 10;
-	//System.out.println(@variable);
+	//System.out.println(@variable);  //NOT
 	
 	float FloatMarks = 10.5f;
-	System.out.println(FloatMarks);
+	System.out.println(FloatMarks);   
 	float floatMarks1 = 10.5f;
 	System.out.println(floatMarks1);*/
 	
 	
 	//int int = 10;
-	//System.out.println(int);
+	//System.out.println(int);  
 	
 	//int String = 100;
 	//System.out.println(String);

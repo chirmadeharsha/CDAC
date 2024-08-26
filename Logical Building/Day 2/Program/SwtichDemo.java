@@ -26,7 +26,7 @@ class SwtichDemo{
 			System.out.println("double 2");
 				break;
 			*/
-				
+				System.out.println("int switch");
 						
 		}
 		System.out.println("after switch");
