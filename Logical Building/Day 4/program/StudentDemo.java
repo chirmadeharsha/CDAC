@@ -45,9 +45,9 @@ class StudentDemo{
 		Student studentObj2 = new Student(1,"Pratik",70.0f,9876544321L,"jalgaon");
 		
 		
-		System.out.println(studentObj1.name);
+	ste	System.out.println(studentObj1.name);
 		
-		System.out.println(studentObj1.instituteName);
+		Sym.out.println(studentObj1.instituteName);
 		
 		System.out.println(studentObj2.name);
 		
