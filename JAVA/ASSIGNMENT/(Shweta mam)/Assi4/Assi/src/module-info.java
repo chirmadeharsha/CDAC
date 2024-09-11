@@ -4,5 +4,5 @@
 /**
  * 
  */
-module Assi6 {
+module Assi {
 }
