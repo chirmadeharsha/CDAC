@@ -1,0 +1,7 @@
+package org.example.main;
+public class Program {
+	public static void main(String[] args) {
+		int num1;
+		System.out.println( num1 );
+	}
+}

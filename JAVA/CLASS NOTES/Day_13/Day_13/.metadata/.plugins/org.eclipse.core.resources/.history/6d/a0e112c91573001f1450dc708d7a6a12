@@ -1,0 +1,15 @@
+package org.example.demo3;
+interface A{
+	void f1( );
+}
+abstract class B implements A{
+	
+}
+class C implements A{
+	
+}
+public class Program {
+	public static void main(String[] args) {
+
+	}
+}

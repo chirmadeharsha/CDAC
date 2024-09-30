@@ -1,0 +1,16 @@
+package org.example.main;
+
+import org.example.domain.Employee;
+
+public class Program {
+	public static void main(String[] args) {
+		public static void main(String[] args) {
+			Employee emp1 = new Employee("Sandeep", 33, 45000.50f, 1, 9, 2021);
+			Employee emp2 = emp1;	//Shallow Copy of reference
+		}
+	}
+	public static void main1(String[] args) {
+		Employee emp1 = new Employee("Sandeep", 33, 45000.50f, 1, 9, 2021);
+		Employee emp2 = emp1;	//Shallow Copy of reference
+	}
+}

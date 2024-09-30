@@ -1,0 +1,17 @@
+package org.example.demo2;
+
+import java.util.Scanner;
+
+public class Program {
+	public static void main(String[] args) {
+		Scanner sc = null;
+		try {
+			sc = new Scanner(System.in);
+			System.out.println("Enter number	:	");
+			int number = sc.nextInt();
+			System.out.println("Number	:	"+number);
+		}finally {
+			sc.close();
+		}
+	}
+}

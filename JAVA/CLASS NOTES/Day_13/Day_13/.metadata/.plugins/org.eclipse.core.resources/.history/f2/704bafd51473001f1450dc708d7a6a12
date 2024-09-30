@@ -1,0 +1,16 @@
+package org.example.demo2;
+interface A{
+	int num1 = 10;
+}
+interface B{
+	int num2 = 20;
+}
+interface C extends A, B{	//Multiple interface inheritance
+	int num3 = 30;
+}
+public class Program {
+	public static void main(String[] args) {
+		System.out.println("Num1	:	"+A.num1);	//10
+		System.out.println("Num1	:	"+C.num1);	//10
+	}
+}

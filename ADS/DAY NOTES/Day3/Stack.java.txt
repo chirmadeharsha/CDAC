@@ -1,0 +1,50 @@
+class stack{
+//dont change value throughouut........
+    static final int Max=10;
+    int top;
+	int a[]=new int[MAX];
+	stack()
+	{
+	top=-1;
+	}
+	//-------------------------------------------------------
+	
+	//underflow
+	boolean isEmpty()
+	{
+	   return (top<0);
+	}
+	
+	//-------------------------------------------------------
+	//insertion in stack 
+	boolean push(int x)
+	{
+	if(top>=(MAx-1)){
+	System.out.println("Stack overflow");
+	return false;
+ 	}
+	a[++top]=x;
+	return true;
+	}
+	
+	//---------------------------------------------------
+	//deleion
+	int pop(){
+	if(top<0){
+	System.out.println("Stack underflow);
+	return 0;
+	}
+	
+	return a [top--];
+	}
+	
+	//----------------------------------------------------------------
+	//peek-to kn ow the position
+	int peek()
+	{
+	return (top<0)?0:a[top];
+	}
+	public static void main(Strings args[]){
+	}
+	}
+	//---------------------------------------------------------

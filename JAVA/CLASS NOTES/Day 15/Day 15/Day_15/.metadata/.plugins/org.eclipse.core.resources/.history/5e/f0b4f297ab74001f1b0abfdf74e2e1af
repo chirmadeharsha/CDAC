@@ -1,0 +1,12 @@
+package org.example.demo2;
+
+import java.util.function.BiFunction;
+import java.util.function.Function;
+
+public class Program {
+	public static void main(String[] args) {
+		//R apply(T t, U u)
+		BiFunction<Integer, Integer, Integer> function = (Integer num1, Integer num2  ) -> num1 + num2;
+		int result = function.apply(10, 20);
+	}
+}

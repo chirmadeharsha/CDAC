@@ -1,0 +1,19 @@
+package org.example.demo4;
+
+class Base{
+	private int num1;
+	private int num2;
+	public Base(int num1, int num2) {
+		this.num1 = num1;
+		this.num2 = num2;
+	}
+	public void printRecord( ) {
+		System.out.println("Num1	:	"+this.num1);
+		System.out.println("Num2	:	"+this.num2);
+	}
+}
+public class Program {
+	public static void main(String[] args) {
+
+	}
+}

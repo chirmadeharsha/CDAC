@@ -1,0 +1,23 @@
+package org.example.main;
+
+class Base{
+	public Number print( ) {
+		System.out.println("Base.print");
+		Number number = new Integer( 123 );	//Upcasting
+		return number;
+	}
+}
+class Derived extends Base{
+	@Override
+	public Integer print( ) {
+		System.out.println("Derived.print");
+		Integer number = new Integer( 123 );
+		return number;
+	}	
+}
+public class Program {
+	public static void main(String[] args) {
+		Base base = new Derived();	//Upcasting
+		base.print();
+	}
+}
