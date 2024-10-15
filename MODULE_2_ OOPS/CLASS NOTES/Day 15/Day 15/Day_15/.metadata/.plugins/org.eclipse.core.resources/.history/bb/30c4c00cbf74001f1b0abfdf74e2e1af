@@ -1,0 +1,25 @@
+package org.example.demo6;
+
+import java.util.Scanner;
+
+class Calculator{
+	public int sub( int num1, int num2 ) {
+		return num1 -  num2;
+	}
+	public double sum( int num1, float num2, double num3) {
+		return num1 +  num2 + num3;
+	}
+}
+
+public class Program {
+	public static void main(String[] args) {
+		try( Scanner sc = new Scanner(System.in)){
+			System.out.print("Enter F.Q.Class Name");
+			String className = sc.nextLine();	//org.example.demo6.Calculator
+			Class<?> c =  Class.forName(className);
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+}

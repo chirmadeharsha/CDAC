@@ -1,0 +1,10 @@
+package org.example.demo2;
+public class Program {
+	public static void main(String[] args) {
+		try {
+			System.out.println("Hello.");
+		}finally {
+			
+		}
+	}
+}

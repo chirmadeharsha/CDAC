@@ -1,0 +1,39 @@
+package org.example.demo3;
+
+abstract class Test{
+	public abstract void f1( );
+	public abstract void f2( );
+	public abstract void f3( );
+}
+
+class TestImpl extends Test{
+	@Override
+	public void f1() {	}
+	@Override
+	public void f2() {	}
+	@Override
+	public void f3() {	}
+}
+class A extends TestImpl{
+	@Override
+	public void f1() {
+		System.out.println("A.f1");
+	}
+}
+class B extends TestImpl{
+	@Override
+	public void f2() {
+		System.out.println("B.f2");
+	}
+}
+class C extends TestImpl{
+	@Override
+	public void f3() {
+		System.out.println("B.f2");
+	}
+}
+public class Program {
+	public static void main1(String[] args) {
+
+	}
+}

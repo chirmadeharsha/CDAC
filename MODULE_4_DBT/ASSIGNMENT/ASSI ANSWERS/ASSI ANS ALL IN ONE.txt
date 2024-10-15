@@ -1,0 +1,292 @@
+Assignment 2
+
+1) Which field of the Customers table is the primary key?
+A. As cnum which indicates customer number which is unique for each and every customer so cnum is primary key. 
+
+
+2) What is the 4th column of the Customers table?
+A. mysql> select rating from customers;
+
+3) What is another word for row? For column?
+A. Row = Tuple or entity, Column = Atributes or key.
+
+4) Why isn’t it possible to see the first five rows of a table?
+A. We cannot see first few rows of rdbms because inserted data is not in sequential manner to keep insertion operation simulatenously for multiple user inserted row
+   is inserted between any free space of row.
+
+------------------------------------
+
+Assignment 3
+
+
+1) Does ANSI recognize the data type DATE?
+A. yes,ANSI sql standard recognize the Date type in format of 'yyyy-mm-dd'.
+
+
+2) Which subdivision of SQL is used to insert values in tables?
+A. DML (Data manipulation language)
+   * Insert
+   * Delete
+   * Update
+
+
+------------------------------------
+
+Assignment –4
+Retrieving Information from Tables.
+
+
+1) Write a select command that produces the order number, amount, and date for all
+rows in the Orders table.
+A. select onum,amt,odate from orders;
+
+2) Write a query that produces all rows from the Customers table for which the
+salesperson’s number is 1001.
+A. select * from Customers where snum=1001;
+
+3) Write a query that displays the Salespeople table with the columns in the
+following order: city, sname, snum, comm.
+A. select city,sname,snum,comm from salespeople;
+
+4) Write a select command that produces the rating followed by the name of each
+customer in San Jose.
+A. select rating,cname from customers where city='San Jose';
+
+5) Write a query that will produce the snum values of all salespeople (suppress the
+duplicates) with orders in the Orders table.
+A. select distinct snum,onum from orders;
+
+
+----------------------------------
+
+Assignment –5 Relational and Logical
+Operators.
+
+1) Write a query that will give you all orders for more than Rs. 1,000.
+A. select * from orders where amt>1000;
+
+2) Write a query that will give you the names and cities of all salespeople in
+London with a commission above .10.
+A. select sname,city from salespeople where city='London' and comm>.10;
+
+3) Write a query on the Customers table whose output will exclude all customers
+with a rating <= 100, unless they are located in Rome.
+A. select * from customers where rating>100 or city='Rome';
+
+4) What will be the output from the following query?
+
+ Select * from Orders
+ where (amt < 1000 OR
+ NOT (odate = ‘1990-10-03’
+ AND cnum > 2003));
+
+A. Order  within amount less than 1000 will be included or order placed on date
+1990-10-03 where cnum is greater than 2003  will be included.
+
+
+5) What will be the output of the following query?
+
+ Select * from Orders
+ where NOT ((odate = ‘1990-10-03’ OR snum
+ >1006) AND amt >= 1500);
+A. This query will return all rows from the Orders table where
+Either the order date is not '1990-10-03' AND the salesperson number is 1006 or 
+lower,OR The amount is less than 1500.
+
+
+6) What is a simpler way to write this query?
+
+ Select snum, sname, city, comm From Salespeople
+where (comm > .12 OR comm <.14); 
+A. select * from salespeople; (This logic prints all the values, so no need to 
+use  where condition)
+
+
+
+----------------------------------------
+
+Assignment –6
+
+Using Special Operators in Conditions.
+1) Write two different queries that would produce all orders taken on October 3rd or
+4
+th, 1990.
+A. select * from  orders where odate='1990-10-03' or odate='1990-10-04';
+
+
+
+2) Write a query that selects all of the customers serviced by Peel or Motika.
+(Hint: the snum field relates the two tables to one another).
+A. select customers.* from customers,salespeople where 
+salespeople.snum=customers.snum and 
+(salespeople.sname='Peel' or salespeople.sname='Motika');
+
+
+
+3) Write a query that will produce all the customers whose names begin with a letter
+from ‘A’ to ‘G’.
+A. select * from customers where cname between 'A%' and 'G%';
+
+
+4) Write a query that selects all customers whose names begin with the letter ‘C’.
+A.  select * from customers where cname like 'C%';
+
+
+5) Write a query that selects all orders except those with zeroes or NULLs in the amt
+field.
+A. select * from orders where amt>=0 or amt is not null;
+
+
+
+------------------------------------
+
+Assignment –7
+Summarizing Data with Aggregate Functions.
+
+
+1) Write a query that counts all orders for October 3.
+A.  select count(*) as ocount from orders where odate='1990-10-03';
+
+
+2) Write a query that counts the number of different non-NULL city values in the
+Customers table.
+A. select  count(distinct city) as cityc from customers where city is not null;
+
+
+
+3) Write a query that selects each customer’s smallest order.
+A. select cnum, min(amt) as mina from orders group by cnum;
+
+
+4) Write a query that selects the first customer, in alphabetical order, whose name
+begins with G.
+A. select * from  customers where cname like 'G%' order by cname limit 1;
+
+
+
+5) Write a query that selects the highest rating in each city.
+A. select city, max(rating) as maxr from customers group by city;
+
+
+
+6) Write a query that counts the number of salespeople registering orders for each
+day. (If a salesperson has more than one order on a given day, he or she should be
+counted only once.)
+A.  select odate,count(distinct snum) as abc from orders group by odate;
+
+
+
+
+
+
+---------------------------------------
+
+
+Assignment –8
+Formatting Query output.
+1) Assume each salesperson has a 12% commission. Write a query on the orders
+table that wills produce the order number, the salesperson number, and the amount
+of the salesperson’s commission for that order.
+A. select onum,snum, amt*12/100 as commission from orders;
+
+
+2) Write a query on the Customers table that will find the highest rating in each city.
+Put the output in this form:
+ For the city (city), the highest rating is : (rating).
+A. select city, max(rating) from customers group by city; 
+
+
+3) Write a query that lists customers in descending order of rating. Output the rating
+field first, followed by the customer’s name and number.
+A. select rating,cname,cnum from customers order by rating desc;
+
+
+4) Write a query that totals the orders for each day and places the results in
+descending order.
+A. select odate, count(odate) from orders group by odate;  
+
+
+---------------------------------
+
+
+
+Assignment – 9
+Querying Multiple Tables at Once.
+
+
+1) Write a query that lists each order number followed by the name of the customer
+who made the order.
+A. select orders.onum,customers.cname from orders inner join customers on
+   orders.cnum=customers.cnum;
+
+
+
+2) Write a query that gives the names of both the salesperson and the customer for
+each order along with the order number.
+A. select salespeople.sname,customers.cname,orders.onum from 
+customers inner join salespeople on 
+customers.snum = salespeople.snum inner join orders on customers.snum=orders.snum;
+
+
+
+
+3) Write a query that produces all customers serviced by salespeople with a
+commission above 12%. Output the customer’s name, the salesperson’s name,
+and the salesperson’s rate of commission.
+A. select customers.cname,salespeople.sname,salespeople.comm 
+from customers inner join salespeople on 
+customers.snum = salespeople.snum having comm>0.12;
+
+
+4) Write a query that calculates the amount of the salesperson’s commission on each
+order by a customer with a rating above 100.
+A.  
+
+
+
+
+-----------------------------------------
+
+
+Assignment – 10
+Joining a Table to Itself.
+
+
+1) Write a query that produces all pairs of salespeople who are living in the same
+city. Exclude combinations of salespeople with themselves as well as duplicate
+rows with the order reversed.
+
+
+
+
+
+
+2) Write a query that produces the names and cities of all customers with the same
+rating as Hoffman.
+
+
+
+
+
+
+-----------------------------------------
+
+Assignment – 11
+Subqueries.
+
+
+
+1) Write a query that uses a subquery to obtain all orders for the customer named
+Cisneros. Assume you do not know his customer number (cnum).
+
+
+
+
+2) Write a query that produces the names and ratings of all customers who have
+above-average orders.
+
+
+
+
+3) Write a query that selects the total amount in orders for each salesperson for
+whom this total is greater than the amount of the largest order in the table. 

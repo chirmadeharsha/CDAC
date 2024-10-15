@@ -1,0 +1,27 @@
+package org.example.demo8;
+
+import java.time.LocalDate;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+
+public class Program { 
+	//void accept(T t)
+	public void print( Consumer< String> c, String str ) {
+		c.accept(str);
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+	public static void main1(String[] args) {
+		Consumer<String> c1 =  str -> System.out.println( str );
+		c1.accept("Good Morning!!");
+		
+		Consumer<Integer> c2 =  number -> System.out.println( number );
+		c2.accept( 10 );
+		
+		Consumer<LocalDate> c3 =  localDate -> System.out.println( localDate.getDayOfMonth()+" / "+localDate.getMonthValue()+" / "+localDate.getYear() );
+		c3.accept( LocalDate.now());
+	}
+	
+}

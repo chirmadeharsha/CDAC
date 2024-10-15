@@ -1,0 +1,25 @@
+package org.example.main;
+
+import java.util.Date;
+
+public class Program {
+	public static void main(String[] args) {
+		long timeMillis = System.currentTimeMillis();
+		Date date = new Date(timeMillis);
+		//System.out.println(date.toString());
+		
+		int day = date.getDate();
+		int month = date.getMonth() + 1;
+		int year = date.getYear() + 1900;
+		
+		System.out.println(day+" / "+month+" / "+year);
+	}
+	public static void main1(String[] args) {
+		Date date = new Date();
+		int day = date.getDate();
+		int month = date.getMonth() + 1;
+		int year = date.getYear() + 1900;
+		
+		System.out.println(day+" / "+month+" / "+year);
+	}
+}

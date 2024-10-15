@@ -1,0 +1,17 @@
+package org.example.demo4;
+
+import java.util.InputMismatchException;
+
+public class Program {
+	public static void main(String[] args) {
+		try {
+			//TODO
+		}catch( ArithmeticException ex ) {
+			ex.printStackTrace();
+		}catch (RuntimeException e) {
+			ex.printStackTrace();
+		}catch (Exception ex) {
+			ex.printStackTrace();
+		}
+	}
+}

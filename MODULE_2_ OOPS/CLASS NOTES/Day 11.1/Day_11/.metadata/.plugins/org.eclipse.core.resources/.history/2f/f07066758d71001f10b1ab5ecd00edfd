@@ -1,0 +1,19 @@
+package org.example.main;
+
+class Base{
+	public void print( ) {
+	}
+}
+class Derived extends Base{
+	@Override
+	public void print() {
+		System.out.println("Hello");
+	}
+}
+public class Program {
+	public static void main(String[] args) {
+		Base base = new Derived( );	//Upcasting
+		
+		base.print();	//Dynamic Method Dispatch
+	}
+}

@@ -1,8 +1,0 @@
-package org.example.domain;
-
-public class Employee {
-	private String name;
-	private int empid;
-	private float salary;
-	private Date joinDate;
-}

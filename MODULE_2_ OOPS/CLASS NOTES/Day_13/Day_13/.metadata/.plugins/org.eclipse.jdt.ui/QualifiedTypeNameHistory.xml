@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="org.example.demo1.PrintableImpl"/>
+    <fullyQualifiedTypeName name="org.example.demo1.Printable"/>
+    <fullyQualifiedTypeName name="org.example.demo4.TestImpl"/>
+    <fullyQualifiedTypeName name="org.example.demo6.Collection"/>
+    <fullyQualifiedTypeName name="org.example.demo6.Array"/>
+    <fullyQualifiedTypeName name="org.example.demo9.Collection"/>
+    <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="org.example.util.CompareByName"/>
+    <fullyQualifiedTypeName name="org.example.util.CompareByEmpid"/>
+    <fullyQualifiedTypeName name="org.example.util.CompareBySalary"/>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="org.example.domain.Employee"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+</qualifiedTypeNameHistroy>

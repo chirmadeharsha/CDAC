@@ -1,9 +1,0 @@
-package org.example.demo5;
-
-import java.lang.reflect.Method;
-
-public class Program {
-	public static void main(String[] args) {
-		
-	}
-}

@@ -1,6 +1,0 @@
-package org.example.demo1;
-public class Program {	//Program.class
-	public static void main(String[] args) {
-	
-	}
-}

@@ -1,0 +1,19 @@
+package org.example.demo3;
+interface A{
+	void f1( );
+}
+abstract class B implements A{
+	
+}
+class C implements A{
+	@Override
+	public void f1() {
+		System.out.println("C.F1");
+	}
+}
+
+public class Program {
+	public static void main(String[] args) {
+
+	}
+}

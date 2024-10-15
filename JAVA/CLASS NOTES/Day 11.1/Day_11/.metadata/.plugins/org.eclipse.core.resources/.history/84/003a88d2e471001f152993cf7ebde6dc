@@ -1,9 +1,0 @@
-package org.example.demo1;
-
-public class Program {
-	public static void main(String[] args) {
-		int num1 = 10;
-		//double num2 = ( double )num1;	//Widening: OK
-		double num2 = num1;	//Widening: OK
-	}
-}
