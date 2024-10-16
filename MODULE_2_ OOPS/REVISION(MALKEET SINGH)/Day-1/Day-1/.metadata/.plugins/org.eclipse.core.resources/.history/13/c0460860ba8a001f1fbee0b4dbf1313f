@@ -1,0 +1,67 @@
+package com.cdac.genric;
+
+class Student
+{
+	int RollNo;
+	String Name;
+	
+	void ShowRecord()
+	{
+		System.out.println("Roll No:"+this.RollNo+ " Name: "+this.Name);
+	}
+}
+
+
+class Demo<T> //<> is know daimond operator used to indicate generic type
+{
+	T Var1;   //A variable declared using T is known as Generic variable
+	T Var2;
+	
+	void ShowRecord()
+	{
+		System.out.println(this.Var1+" "+this.Var2);
+	}
+}
+
+public class GenericDemo {
+	
+	public static void main(String[] args) {
+		
+		Demo d1=new Demo();
+		
+		d1.Var1="Malkeet";
+		d1.Var2="Singh";
+		
+		Demo d2=new Demo();
+		d2.Var1=10889;
+		d2.Var2=78906;
+		d1.ShowRecord();
+		d2.ShowRecord();
+		
+		Demo d3=new Demo();
+		
+		d3.Var1="Sham";
+		d3.Var2=890.89f;
+		d3.ShowRecord();
+		
+		Demo<Float> d4=new Demo<Float>();
+		d4.Var1="Mlakeet";
+		d4.Var2=78890.90f;
+	}
+
+	public static void main1(String[] args) {
+		
+		Student s1=new Student();
+		s1.Name="Malkeet";
+		s1.RollNo=1001;
+		
+		Student s2=new Student();
+		s2.Name="Sham";
+		s2.RollNo=1002;
+		
+		//s1.RollNo=567.89f;
+		
+
+	}
+
+}
